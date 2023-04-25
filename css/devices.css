@@ -1,0 +1,84 @@
+@import url("https://fonts.cdnfonts.com/css/proxima-nova-2");
+
+.table {
+    margin: auto;
+    margin-top: 5vh;
+    background-color: white;
+    border-radius: 3vh;
+    width: 90vw;
+    font-family: "Proxima Nova", sans-serif;
+    text-align: center;
+    border-color: rgb(3, 146, 91);
+    border: 50vh;
+    border-bottom: none;
+    font-size: 1.5vh;
+}
+
+table tr td:last-child {
+    width: 15vw;
+    border-bottom: none;
+}
+
+td {
+    border-bottom: none;
+}
+
+.editbutton {
+    position: relative;
+    font-family: "Proxima Nova", sans-serif;
+    background-color: white;
+    border-radius: 10vh;
+    display: inline-block;
+    width: 10vh;
+    height: 3vh;
+}
+
+.deletebutton {
+    position: relative;
+    font-family: "Proxima Nova", sans-serif;
+    color: inherit;
+    text-decoration: none;
+    border-radius: 10vh;
+    display: inline-block;
+    width: 10vh;
+    height: 3vh;
+    border: 0.3vh solid;
+    background: rgb(255, 255, 255);
+    border-radius: 25vh;
+    cursor: pointer;
+}
+
+.addbutton {
+    position: relative;
+    font-family: "Proxima Nova", sans-serif;
+    background-color: white;
+    top: 2vh;
+    left: 160vh;
+    width: 20vh;
+    height: 5vh;
+    border: 0.3vh solid;
+    background: rgb(255, 255, 255);
+    border-radius: 25vh;
+    font-size: 2vh;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.addbutton:hover {
+    border-color: rgb(3, 146, 91);
+    color: rgb(1, 99, 61);
+    transition: 0.2s all ease;
+}
+
+.editbutton:hover {
+    border-color: rgb(3, 146, 91);
+    color: rgb(1, 99, 61);
+    transition: 0.2s all ease;
+    font-size: 1.7vh;
+}
+.deletebutton:hover {
+    border-color: rgb(255, 0, 0);
+    color: rgb(255, 0, 0);
+    transition: 0.2s all ease;
+    font-size: 1.7vh;
+}
