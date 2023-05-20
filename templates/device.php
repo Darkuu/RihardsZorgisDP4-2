@@ -11,11 +11,13 @@
 
         // Input Values Defining
         $Name =  $_REQUEST['Name'];
-        $RoomID = $_REQUEST['Type'];
+        $RoomID = $_REQUEST['Room'];
+        $Description = $_REQUEST['Description'];
+        
          
         // Performing insert query execution
-        $sql = "INSERT INTO inventory (Name, RoomID) VALUES 
-        ('$Name', '$RoomID')";
+        $sql = "INSERT INTO inventory (Name, RoomID, Description) VALUES 
+        ('$Name', '$RoomID', '$Description')";
 
         mysqli_query($db,$sql);
 

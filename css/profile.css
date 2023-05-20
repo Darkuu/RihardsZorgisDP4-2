@@ -57,7 +57,9 @@
     transition: all 0.4s ease-in-out;
 }
 .buttonleft {
-    position: relative;
+    color: inherit; 
+    text-decoration: none!important;
+    position: absolute;
     display: flex; /* equal height of the children */
     color: rgb(255, 255, 255);
     background: rgb(4, 82, 52);
@@ -66,7 +68,8 @@
     transition: all 0.4s ease-in-out;
 }
 .buttonright {
-    position: relative;
+    text-decoration: none!important;
+    position: absolute;
     display: flex; /* equal height of the children */
     color: rgb(255, 255, 255);
     background: rgb(4, 82, 52);

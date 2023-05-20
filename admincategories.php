@@ -23,7 +23,8 @@
             header("Location: index.html");
             ?>
     <?php else: ?>
-        <ul class="nav nav-pills"> 
+            <!-- Logged in  -->
+            <ul class="nav nav-pills"> 
             <a class="navbar-brand"  href="adminpage.php">
             <img class="navbar-logo" src="images/RTULOGO.png" alt="..." width="150" height="80" draggable="false" >
             </li>
@@ -45,19 +46,15 @@
             </li>
         </ul>
         <img class="title-image" src="/images/RTUEKA.jpg" alt="..." ></div>
+
     <?php endif; ?>
 
 
 <body>
     <table class="table" id="table-request">
         <tr>
-            <th>Lietotāja ID</th>
-            <th>Status</th>
-            <th>PersonasKods</th>
-            <th>Vārds</th>
-            <th>Uzvārds</th>
-            <th>E-pasts</th>
-            <th>Profesija</th>
+            <th>Kategorijas ID</th>
+            <th>Nosaukums</th>
         </tr>
         <tr id="Values">
             <?php
@@ -65,23 +62,18 @@
             $db = new PDO('mysql:host=localhost;dbname=school', 'root', '');
 
 
-            foreach ($db->query("SELECT * FROM user ORDER BY id asc")  as $results)
+            foreach ($db->query("SELECT * FROM category ORDER BY id asc")  as $results)
             {
             echo "<td>" . $results["ID"] . "</td>";
-            echo "<td>" . $results["Status"] . "</td>";
-            echo "<td>" . $results["PersonalCode"] . "</td>";
             echo "<td>" . $results["Name"] . "</td>";
-            echo "<td>" . $results["Surname"] . "</td>";
-            echo "<td>" . $results["Email"] . "</td>";
-            echo "<td>" . $results["Profession"] . "</td>";
-            echo "<td style='width:5vw' >" . "<input type='submit' class='editbutton' name='Edit' value='Rediģēt' />" . "</td>";
-            echo "<td style='width:5vw' >" . "<input type='submit' class='deletebutton' name='delete' value='Dzēst' />" . "</tr>" . "</td>";
+            echo "<td style='width:5vw' >" . "<a class='deletebutton' href='editcategory.php? id="  . $results["ID"] . " '>Rediģēt</a>" . "</td>";
+            echo "<td style='width:5vw' >" . "<a class='deletebutton' href='templates/categorydelete.php? id="  . $results["ID"] . " '>Dzēst</a>" . "</tr>" . "</td>";
             }
 
             ?>
         </tr>
     </table>
-    <a href="addusers.php">
+    <a href="addcategory.php">
         <button class="addbutton">Pievienot</button>
     </a>
 </body>

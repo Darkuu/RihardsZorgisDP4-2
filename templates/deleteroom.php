@@ -5,12 +5,12 @@
  if(isset($id)){
 // Performing insert query execution
 print_r($_GET);
-$sql = "DELETE FROM Inventory WHERE InventoryID = $id[id] ";
+$sql = "DELETE FROM room WHERE RoomID = $id[id] ";
 mysqli_query($db,$sql);
 // Close connection
 mysqli_close($db);
 //redirect
-header('Location: /schoolpage/devices.php');
+header('Location: /schoolpage/room.php');
 
 }else{
     print_r($_GET);

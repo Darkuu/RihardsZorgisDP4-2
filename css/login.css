@@ -9,6 +9,8 @@ body {
     background-color: rgba(24, 24, 24, 0.274);
     backdrop-filter: blur(0.4vh) brightness(60%);
     font-family: "Proxima Nova", sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .center {

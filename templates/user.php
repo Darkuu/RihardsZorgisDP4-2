@@ -17,7 +17,7 @@
     $Password = $_REQUEST['Parole'];
     
     // Performing insert query execution
-    $sql = "INSERT INTO lietotājs (Status, PersonasKods, Vārds, Uzvārds, Profesija, Epasts, Parole) VALUES 
+    $sql = "INSERT INTO user (Status, PersonalCode, Name, Surname, Profession, Email, Password) VALUES 
     ('user', '$Personcode', '$Name', '$Surname', '$Position', '$Email', '$Password')";
 
     mysqli_query($db,$sql);

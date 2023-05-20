@@ -7,7 +7,6 @@ body {
     background-size: cover;
     padding: 1vh 0vw;
     background-color: rgba(24, 24, 24, 0.274);
-    backdrop-filter: blur(0.4vh);
     font-family: "Proxima Nova", sans-serif;
 }
 
@@ -17,7 +16,7 @@ body {
     left: 50vw;
     transform: translate(-50%, -50%);
     width: 20vw;
-    height: 45vh;
+    height: 60vh;
     background: white;
     border-radius: 2vh;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
@@ -82,10 +81,10 @@ form .txtfield {
 }
 input[type="submit"] {
     position: relative;
-    top: 5vh;
-    width: 42%;
+    top: 2vh;
+    width: 6.7vw;
     height: 5vh;
-    border: 0.3vh solid;
+    border: 0.3vw solid;
     background: rgb(4, 82, 52);
     border-radius: 10vw;
     font-size: 2.3vh;
@@ -103,10 +102,10 @@ input[type="submit"]:hover {
 }
 .backbutton {
     position: relative;
-    top: 5vh;
-    width: 41%;
+    top: 2vh;
+    width: 6.7vw;
     height: 5vh;
-    border: 0.3vh solid;
+    border: 0.3vw solid;
     background: rgb(4, 82, 52);
     border-radius: 10vw;
     font-size: 2.3vh;
@@ -117,4 +116,17 @@ input[type="submit"]:hover {
     margin: 1vw 0;
     border-top: 10vh;
     margin-left: 1vw;
+    
+}
+
+.option {
+    width: 16vw;
+    padding: 0 0.5vh;
+    height: 4vh;
+    font-size: 0.9vw;
+    border: none;
+    background: none;
+    outline: none;
+    border-radius: 10vw;
+    border-bottom: 0.3vh;
 }

@@ -28,14 +28,19 @@
                 <a class="nav-link" href="request.php">Pieprasījumi</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="devices.php">Datori</a>
+                <a class="nav-link" href="devices.php">Inventārs</a>
             <li class="nav-item-left">
                 <a class="nav-link" href="users.php">Lietotāji</a>
             </li>
             <li class="nav-item-left">
-            <button class="nav-link"  onclick="location.href='templates/exit.php';">Log Out</button>
+                <a class="nav-link" href="room.php">Kabineti</a>
+            </li>
+            <li class="nav-item-left">
+            <button class="nav-link"  onclick="location.href='templates/exit.php';">Atslēgties</button>
             </li>
         </ul>
+        <img class="title-image" src="/images/RTUEKA.jpg" alt="..." ></div>
+
         <img class="title-image" src="/images/RTUEKA.jpg" alt="..." ></div>
 
 

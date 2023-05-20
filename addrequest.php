@@ -28,17 +28,15 @@
 <body>
     <div class="center">
         <h1>Pievieno Pieprasījumu</h1>
-        <form class="Form" action="templates/request.php" method="post">
-            <div class="txtfield">
-                
+        <form class="Form" action="templates/request.php" method="post">           
             <div class="txtfield">
                 Sakuma Laiks
-                <input type="Time" name="StartTime" required class="date" placeholder="Sakuma Laiks" />
+                <input type="Time" name="StartTime" name="VisibleStartTime" required class="date" placeholder="Sākuma Laiks" />
                 <span></span>
             </div>
             <div class="txtfield">
                 Beigu Laiks
-                <input type="Time" name="EndTime" required class="date" placeholder="Beigu Laiks" />
+                <input type="Time" name="EndTime" required class="date" />
                 <span></span>
             </div>
 
@@ -63,6 +61,19 @@
                 </select>
             </div>
 
+            <div class="txtfield">
+                <select name="InventoryID" id="InventoryID" class="option">
+                <option value="" disabled selected hidden>Inventāra ID</option>
+                <?php
+                    $db = new PDO('mysql:host=localhost;dbname=school', 'root', '');
+                    foreach ($db->query("SELECT * FROM Inventory") as $results)
+                    {
+                        echo "<option>" . $results["InventoryID"] . "</option>";
+                    }
+                ?>
+                </select>
+            </div>
+
 <!-- PHP | call rooms from table -->
 
             <div class="txtfield">
@@ -80,10 +91,10 @@
             </div>
             <input type="submit" value="Pievienot" />
         </form>
-    </div>
-    <a href="userrequest.php">
+        <a href="userrequest.php">
                     <button class="backbutton">Atgriezties</button>
     </a>
+    </div>
 </body>
 
 </html>

@@ -54,20 +54,32 @@
             <div id="profile-title" class="profile-title">Tavs profils</div>
                 <table id="profile-table" class="table table-borderless">
                     <div class="profile-info">
-                        <div>
-                        <h1 class="profile-name-title">Vārds</h1>
-                        <div id="profile-name" class="profile-name">TavsVārds</div>
-                    </div>
+<table class="table" id="table-request">
 
-                    <div>
-                        <h1 class="profile-name-title">Uzvārds</h1>
-                        <div id="profile-surname" class="profile-surname">TavsUzvārds</div>
-                    </div>
-                    <div>
-                        <h1 class="profile-name-title">Status</h1>
-                        <div id="profile-status" class="profile-status">TavsStatus</div>
-                    </div>
-            </table>
+        <tr>
+            <th>Personas Kods</th>
+            <th>Vārds</th>
+            <th>Uzvārds</th>
+            <th>Profesija</th>
+            <th>E-pasts</th>
+        </tr>
+<!--  PHP | Print values from device table  -->
+        <tr id="Values">
+        <?php
+            $db = new PDO('mysql:host=localhost;dbname=school', 'root', '');
+            $userid = $_COOKIE["userinfo"];
+            foreach ($db->query("SELECT ID, PersonalCode , Name , Surname, Profession, Email FROM user WHERE ID = user_ID" ) as $user)
+            {
+                echo "<td>" . $user["PersonalCode"] . "</td>";
+                echo "<td>" . $user["Name"] . "</td>";
+                echo "<td>" . $user["Surname"] . "</td>";
+                echo "<td>" . $user["Profession"] . "</td>";
+                echo "<td>" . $user["Email"] . "</td>";
+            }
+            
+        ?>
+        </tr>
+    </table>
         </div>
     </div>
 </body>

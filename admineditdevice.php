@@ -27,26 +27,49 @@
 <body>
 
     <div class="center">
-        <h1>Pievieno Ierīci</h1>
-        <form class="Form" action="templates/device.php" method="post">
-            <div class="txtfield">
-                <input type="text" name="Name" required />
-                <label>Nosaukums</label>
-             </div>
+        <h1>Rediģet Inventāru</h1>
+        <?php
+             $db = new PDO('mysql:host=localhost;dbname=school', 'root', '');
+             $id = $_GET;
+             foreach ($db->query("SELECT * FROM inventory where InventoryID = $id[id] ") as $results)
+        ?>
+        <form class="Form" action="templates/edit.php" method="post">
+            
+        <div class="ID" name="InventoryID" required">
+                <?php
+            echo   "<label>Ierīces ID</label>";    
+            echo "<input type='text' name='InventoryID' value='$results[InventoryID]' required readonly />";
+             ?>
 
-             <div class="txtfield">
-                <input type="text" name="Description" required />
-                <label>Apraksts</label>
+            <div class="txtfield" name="Name" required">
+                <?php
+            echo "<input type='text' name='name' value='$results[Name]'  required />";
+            echo   "<label>Nosaukums</label>";
+             ?>
+            </div>
+             <div class="txtfield" name="Description" required>
+             <?php
+                echo "<input type='text' name='Description' value='$results[Description]'  required />";
+                echo "<label>Apraksts</label>";
+                ?>
+             </div>
+             
+            <div  name="TimeLimit" class="txtfield" required>
+             <?php
+                echo "Laika Limits stundās";
+                echo "<input type='number' name='TimeLimit' value='$results[TimeLimit]'  required />";
+                ?>
              </div>
 
             <div class="txtfield">
                 <select name="Room" id="Room" class="option">
+                ?>
                     <option value="" disabled selected hidden>Kabinets</option>
                         <?php
                         $db = new PDO('mysql:host=localhost;dbname=school', 'root', '');
                         foreach ($db->query("SELECT * FROM Room") as $results)
                         {
-                            echo "<option>" . $results["RoomID"] . ' - '. $results["Name"] . "</option>";
+                            echo "<option>" . $results["RoomID"]  . "</option>";
                         }
                         ?>
                     </select>
@@ -54,18 +77,20 @@
             </div>
 
             <div class="txtfield">
-                <select name="Room" id="Room" class="option">
+                <select name="Category" id="Category" class="option">
                     <option value="" disabled selected hidden>Kategorija</option>
                         <?php
                         $db = new PDO('mysql:host=localhost;dbname=school', 'root', '');
                         foreach ($db->query("SELECT * FROM Category") as $results)
                         {
-                            echo "<option>" . $results["Name"] . ' - '. $results["Name"] . "</option>";
+                            echo "<option>" . $results["Name"] . "</option>";
                         }
                         ?>
             </div>
+
+
             <input type="submit" value="Pievienot" />
-            <a href="devices.php">
+            <a href="edit.php">
                 <button class="backbutton">Atgriezties</button>
             </a>
         </form>
