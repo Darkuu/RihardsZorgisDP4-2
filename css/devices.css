@@ -1,0 +1,159 @@
+@import url("https://fonts.cdnfonts.com/css/proxima-nova-2");
+
+.table {
+  margin: auto;
+  margin-top: 5vh;
+  background-color: white;
+  border-radius: 3vh;
+  width: 90vw;
+  font-family: "Proxima Nova", sans-serif;
+  text-align: center;
+  border-color: rgb(3, 146, 91);
+  border: 50vh;
+  border-bottom: none;
+  font-size: 1.5vh;
+  overflow-y: scroll;
+}
+
+table tr td:last-child {
+  width: 15vw;
+  border-bottom: none;
+  overflow-y: scroll;
+}
+
+td {
+  border-bottom: none;
+}
+
+.editbutton {
+  position: relative;
+  font-family: "Proxima Nova", sans-serif;
+  background-color: white;
+  border-radius: 10vh;
+  display: inline-block;
+  width: 10vh;
+  height: 3vh;
+}
+
+.addbutton {
+  position: relative;
+  font-family: "Proxima Nova", sans-serif;
+  background-color: white;
+  top: 2vh;
+  left: 65vw;
+  width: 15vw;
+  height: 5vh;
+  border: 0.3vh solid;
+  background: rgb(255, 255, 255);
+  border-radius: 25vh;
+  font-size: 2vh;
+  font-weight: 700;
+  cursor: pointer;
+}
+.categorybutton {
+  position: relative;
+  font-family: "Proxima Nova", sans-serif;
+  background-color: white;
+  top: 2vh;
+  left: -15vw;
+  width: 15vw;
+  height: 5vh;
+  border: 0.3vh solid;
+  background: rgb(255, 255, 255);
+  border-radius: 25vh;
+  font-size: 2vh;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.addbutton:hover {
+  border-color: rgb(3, 146, 91);
+  color: rgb(1, 99, 61);
+  transition: 0.2s all ease;
+}
+
+.editbutton:hover {
+  border-color: rgb(3, 146, 91);
+  color: rgb(1, 99, 61);
+  transition: 0.2s all ease;
+  font-size: 1.7vh;
+}
+.deletebutton:hover {
+  border-color: rgb(255, 0, 0);
+  color: rgb(255, 0, 0);
+  transition: 0.2s all ease;
+  font-size: 1.7vh;
+}
+.downloadbutton {
+  position: relative;
+  font-family: "Proxima Nova", sans-serif;
+  background-color: white;
+  top: 2vh;
+  left: 65vw;
+  width: 15vw;
+  height: 5vh;
+  border: 0.3vh solid;
+  background: rgb(255, 255, 255);
+  border-radius: 25vh;
+  font-size: 2vh;
+  font-weight: 700;
+  cursor: pointer;
+}
+.downloadbutton:hover {
+  border-color: rgb(3, 146, 91);
+  color: rgb(1, 99, 61);
+  transition: 0.2s all ease;
+}
+
+.deletebutton {
+  position: relative;
+  line-height: 2.5vh;
+  text-decoration: none;
+  font-family: "Proxima Nova", sans-serif;
+  background-color: white;
+  border-color: black;
+  color: black;
+  border-radius: 10vh;
+  border: 0.2vw solid;
+  display: inline-block;
+  width: 10vh;
+  height: 3vh;
+  font-weight: 500;
+}
+
+.popup {
+  position: fixed;
+  top: 35%;
+  left: 25%;
+  width: 20vw;
+  height: 17vh;
+  transform: translate(-50%, -50%);
+  background-color: #f8f8f8;
+  padding: 2vh;
+  border: 0.5vh solid rgb(3, 146, 91);
+  border-radius: 2vh;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+}
+
+.popup h2 {
+  margin-top: 0;
+}
+
+.popup .close-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgb(3, 146, 91);
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.popup .close-button:hover {
+  background-color: rgb(2, 104, 65);
+}
